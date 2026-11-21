@@ -1,0 +1,9 @@
+.legal-page { width: min(760px, calc(100% - 40px)); margin: auto; padding: 56px 0 110px; }
+.legal-page .brand { margin-bottom: 80px; }
+.legal-page .kicker { display: flex; }
+.legal-page h1 { font-size: clamp(40px, 6vw, 64px); line-height: 1.04; margin: 18px 0 22px; letter-spacing: -0.04em; }
+.legal-intro { font-size: 19px; line-height: 1.6; color: var(--muted); margin: 0 0 60px; }
+.legal-page section { border-top: 1px solid var(--line); padding: 28px 0; }
+.legal-page h2 { font-size: 19px; margin: 0; letter-spacing: -0.02em; }
+.legal-page section p { margin: 10px 0 0; font-size: 15px; line-height: 1.8; color: var(--muted); }
+.legal-page .text-link { margin-top: 32px; }
