@@ -1,6 +1,13 @@
 import "../legal.css";
 import Link from "next/link";
 import { Brand } from "../../components/landing/shared";
+import { pageMeta } from "../../lib/site";
+
+export const metadata = pageMeta({
+  title: "Privacy Policy",
+  description: "How Lookzon collects, uses and protects your family's location and voice data, and how you stay in control.",
+  path: "/privacy-policy",
+});
 export function Legal({
   title,
   intro,

@@ -1,4 +1,11 @@
 import { Legal } from "../privacy-policy/page";
+import { pageMeta } from "../../lib/site";
+
+export const metadata = pageMeta({
+  title: "Contact us",
+  description: "Get help with your Lookzon family circle, subscription or account. Support from Bengaluru, India.",
+  path: "/contact",
+});
 export default function Contact() {
   return (
     <Legal

@@ -9,6 +9,15 @@ import { Faq } from "../components/landing/Faq";
 import { Footer } from "../components/landing/Footer";
 import { LangProvider } from "../components/landing/lang";
 import { MotionProvider, ScrollProgress } from "../components/landing/motion";
+import { HomeJsonLd } from "../components/seo/JsonLd";
+import { pageMeta, site } from "../lib/site";
+
+export const metadata = pageMeta({
+  title: site.title,
+  description: site.description,
+  path: "/",
+  absoluteTitle: true,
+});
 
 const ticker = [
   "One circle, total peace of mind",
@@ -22,6 +31,7 @@ const ticker = [
 export default function Home() {
   return (
     <MotionProvider>
+      <HomeJsonLd />
       <LangProvider>
         <ScrollProgress />
         <Header />

@@ -1,4 +1,11 @@
 import { Legal } from "../privacy-policy/page";
+import { pageMeta } from "../../lib/site";
+
+export const metadata = pageMeta({
+  title: "Terms of Service",
+  description: "The terms for using Lookzon, the family safety app — subscriptions, acceptable use and safety limitations.",
+  path: "/terms",
+});
 export default function Terms() {
   return (
     <Legal

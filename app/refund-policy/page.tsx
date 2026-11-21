@@ -1,4 +1,11 @@
 import { Legal } from "../privacy-policy/page";
+import { pageMeta } from "../../lib/site";
+
+export const metadata = pageMeta({
+  title: "Refund & Cancellation Policy",
+  description: "Lookzon's ₹5 48-hour trial, ₹990/month auto-renewal, how to cancel, and our no-refund policy with its exceptions.",
+  path: "/refund-policy",
+});
 
 export default function Refund() {
   return (
