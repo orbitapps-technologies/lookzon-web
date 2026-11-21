@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef, useState, type PointerEvent } from "react";
+import { Fragment, useEffect, useRef, useState, type PointerEvent } from "react";
 import { AnimatePresence, m, useInView, useMotionValue, useSpring, useTransform } from "motion/react";
 import { Dialog } from "../ui/dialog";
 import { playStoreUrl } from "./data";
@@ -16,7 +16,7 @@ const copy = {
   },
   en: {
     l1: "Know they're safe.",
-    l2: "Without having to ask.",
+    l2: "Without asking.",
     lede: "Live location, crash detection and a voice assistant that understands how your family actually talks — so you can stop calling just to check in.",
   },
 };
@@ -24,16 +24,19 @@ const copy = {
 function Line({ text, delay, accent }: { text: string; delay: number; accent?: boolean }) {
   return (
     <span className={accent ? "h-line accent" : "h-line"}>
-      {text.split(" ").map((word, i) => (
-        <span className="h-word" key={`${word}-${i}`}>
-          <m.span
-            initial={{ y: "115%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.9, ease, delay: delay + i * 0.07 }}
-          >
-            {word}
-          </m.span>
-        </span>
+      {text.split(" ").map((word, i, all) => (
+        <Fragment key={`${word}-${i}`}>
+          <span className="h-word">
+            <m.span
+              initial={{ y: "115%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.9, ease, delay: delay + i * 0.07 }}
+            >
+              {word}
+            </m.span>
+          </span>
+          {i < all.length - 1 ? " " : null}
+        </Fragment>
       ))}
     </span>
   );

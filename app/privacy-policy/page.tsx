@@ -5,15 +5,17 @@ export function Legal({
   title,
   intro,
   sections,
+  updated,
 }: {
   title: string;
   intro: string;
   sections: string[][];
+  updated?: string;
 }) {
   return (
     <main className="legal-page">
       <Brand />
-      <span className="kicker">LOOKZON · 2026</span>
+      <span className="kicker">{updated ? `Last updated · ${updated}` : "LOOKZON · 2026"}</span>
       <h1>{title}</h1>
       <p className="legal-intro">{intro}</p>
       {sections.map(([h, p]) => (

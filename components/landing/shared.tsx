@@ -76,6 +76,14 @@ const paths = {
     </>
   ),
   menu: <path d="M4 8h16M4 16h16" />,
+  mail: (
+    <>
+      <rect x="3" y="5" width="18" height="14" rx="2.5" />
+      <path d="m4 7 8 6 8-6" />
+    </>
+  ),
+  chevL: <path d="m15 6-6 6 6 6" />,
+  chevR: <path d="m9 6 6 6-6 6" />,
   close: <path d="M6 6l12 12M18 6 6 18" />,
   logo: (
     <>

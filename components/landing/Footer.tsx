@@ -86,6 +86,10 @@ export function Footer() {
           </div>
         </Reveal>
 
+        <div className="footer-body">
+          <div className="footer-word" aria-hidden="true">
+            lookzon
+          </div>
         <div className="footer-grid">
           <div className="footer-brand">
             <Brand />
@@ -94,35 +98,67 @@ export function Footer() {
               assistant that speaks your language.
             </p>
             <a className="footer-mail" href="mailto:Lookzonsupport@gmail.com">
-              <Icon name="spark" /> Lookzonsupport@gmail.com
+              <span className="fm-icon">
+                <Icon name="mail" />
+              </span>
+              <span>
+                <small>Write to us</small>
+                Lookzonsupport@gmail.com
+              </span>
             </a>
+            <div className="footer-badges">
+              <span>
+                <Icon name="shield" /> Encrypted by design
+              </span>
+              <span>
+                <Icon name="pin" /> Made in India
+              </span>
+            </div>
           </div>
+
           {columns.map((col) => (
             <nav className="footer-col" key={col.title} aria-label={col.title}>
               <b>{col.title}</b>
               {col.links.map(([href, label]) => (
                 <Link key={href} href={href}>
                   {label}
+                  <Icon name="arrow" className="fl-arrow" />
                 </Link>
               ))}
             </nav>
           ))}
-          <div className="footer-col">
+
+          <div className="footer-company">
             <b>Company</b>
-            <span>ORBITAPPS TECHNOLOGIES LLP</span>
-            <span>Bengaluru, Karnataka, India</span>
-            <a href={playStoreUrl}>Lookzon on Google Play</a>
+            <p className="fc-name">ORBITAPPS TECHNOLOGIES LLP</p>
+            <p className="fc-addr">
+              <Icon name="pin" /> Bengaluru, Karnataka, India
+            </p>
+            <a className="fc-play" href={playStoreUrl} aria-label="Get Lookzon on Google Play">
+              <span className="fc-play-icon">
+                <Image src="/brand/lookzon-mark-96.webp" alt="" width={34} height={34} />
+              </span>
+              <span className="fc-play-text">
+                <small>GET IT ON</small>
+                Google Play
+              </span>
+              <Icon name="arrow" className="fc-arrow" />
+            </a>
           </div>
         </div>
-
-        <div className="footer-word" aria-hidden="true">
-          lookzon
         </div>
 
         <div className="footer-bottom">
           <span>© 2026 ORBITAPPS TECHNOLOGIES LLP. All rights reserved.</span>
+          <nav className="fb-links" aria-label="Legal">
+            <Link href="/privacy-policy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <Link href="/refund-policy">Refunds</Link>
+          </nav>
           <span className="footer-bottom-right">
-            <span>Payments secured by Cashfree</span>
+            <span className="fb-secure">
+              <Icon name="lock" /> Payments secured by Cashfree
+            </span>
             <a href="#top" className="to-top" aria-label="Back to top">
               <Icon name="arrow" />
             </a>

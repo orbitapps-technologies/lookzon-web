@@ -3,6 +3,7 @@ export default function Terms() {
   return (
     <Legal
       title="Terms of Service"
+      updated="21 November 2026"
       intro="These terms keep the Lookzon experience clear and fair for every family circle."
       sections={[
         [
@@ -11,7 +12,7 @@ export default function Terms() {
         ],
         [
           "Subscriptions",
-          "The Family Safety Circle starts with a ₹5, 2-day trial and continues at ₹990 per month unless cancelled.",
+          "The Family Safety Circle starts with a ₹5, 48-hour trial and then renews automatically at ₹990 per month until you cancel. All payments are non-refundable once charged, except as described in our Refund Policy.",
         ],
         [
           "Safety limitations",
