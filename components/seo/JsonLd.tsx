@@ -8,19 +8,22 @@ export function HomeJsonLd() {
     "@graph": [
       {
         "@type": "Organization",
-        "@id": `${site.url}/#organization`,
+        "@id": `${site.companyUrl}/#organization`,
         name: site.company,
-        brand: { "@type": "Brand", name: site.name },
-        url: site.url,
-        logo: `${site.url}/icon.png`,
+        alternateName: "OrbitApps Technologies LLP",
+        url: site.companyUrl,
         email: site.email,
+        brand: { "@type": "Brand", name: site.name, url: site.url, logo: `${site.url}/icon.png` },
+        owns: { "@id": `${site.url}/#app` },
         address: {
           "@type": "PostalAddress",
+          streetAddress: site.streetAddress,
+          postalCode: site.postalCode,
           addressLocality: site.locality,
           addressRegion: site.region,
           addressCountry: site.country,
         },
-        sameAs: [site.playStoreUrl],
+        sameAs: [site.companyUrl],
       },
       {
         "@type": "WebSite",
@@ -29,7 +32,7 @@ export function HomeJsonLd() {
         name: site.name,
         description: site.description,
         inLanguage: ["en-IN", "hi-IN"],
-        publisher: { "@id": `${site.url}/#organization` },
+        publisher: { "@id": `${site.companyUrl}/#organization` },
       },
       {
         "@type": "MobileApplication",
@@ -42,7 +45,8 @@ export function HomeJsonLd() {
         downloadUrl: site.playStoreUrl,
         image: `${site.url}/icon.png`,
         inLanguage: ["en", "hi"],
-        publisher: { "@id": `${site.url}/#organization` },
+        publisher: { "@id": `${site.companyUrl}/#organization` },
+        author: { "@id": `${site.companyUrl}/#organization` },
         offers: {
           "@type": "Offer",
           price: "990",

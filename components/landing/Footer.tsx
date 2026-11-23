@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { site } from "../../lib/site";
 import { playStoreUrl } from "./data";
 import { Reveal } from "./motion";
 import { Brand, Icon, PlayBadge } from "./shared";
@@ -130,7 +131,11 @@ export function Footer() {
 
           <div className="footer-company">
             <b>Company</b>
-            <p className="fc-name">ORBITAPPS TECHNOLOGIES LLP</p>
+            <a className="fc-name" href={site.companyUrl} target="_blank" rel="noopener">
+              ORBITAPPS TECHNOLOGIES LLP
+              <Icon name="arrow" className="fc-name-arrow" />
+            </a>
+            <p className="fc-tagline">Lookzon is a product of OrbitApps Technologies</p>
             <p className="fc-addr">
               <Icon name="pin" /> Bengaluru, Karnataka, India
             </p>
@@ -149,7 +154,13 @@ export function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© 2026 ORBITAPPS TECHNOLOGIES LLP. All rights reserved.</span>
+          <span>
+            © 2026{" "}
+            <a className="fb-company" href={site.companyUrl} target="_blank" rel="noopener">
+              ORBITAPPS TECHNOLOGIES LLP
+            </a>
+            . All rights reserved.
+          </span>
           <nav className="fb-links" aria-label="Legal">
             <Link href="/privacy-policy">Privacy</Link>
             <Link href="/terms">Terms</Link>

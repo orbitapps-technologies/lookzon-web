@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   description: site.description,
   applicationName: site.name,
   keywords: [...site.keywords],
-  authors: [{ name: site.company, url: site.url }],
+  authors: [{ name: site.company, url: site.companyUrl }],
   creator: site.company,
   publisher: site.company,
   category: "Family safety",

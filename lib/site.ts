@@ -9,6 +9,9 @@ export const site = {
   description:
     "Lookzon is India's family safety app: live location sharing, crash detection, safe zones, SOS and a voice assistant that understands Hindi, Hinglish and English.",
   company: "ORBITAPPS TECHNOLOGIES LLP",
+  companyUrl: "https://www.orbitappstechnologiesllp.com",
+  streetAddress: "Aspire Coworks, No. 472/7 Balaji Arcade, Koramangala 4th Block",
+  postalCode: "560095",
   email: "Lookzonsupport@gmail.com",
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.lookzon.app",
   androidPackage: "com.lookzon.app",

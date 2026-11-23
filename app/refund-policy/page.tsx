@@ -36,7 +36,7 @@ export default function Refund() {
         ],
         [
           "Contact",
-          "For billing questions, write to support@lookzon.com from the phone number or email linked to your account. Lookzon is operated by ORBITAPPS TECHNOLOGIES LLP, Bengaluru, India.",
+          "For billing questions, write to support@lookzon.com from the phone number or email linked to your account. Lookzon is a product of ORBITAPPS TECHNOLOGIES LLP (www.orbitappstechnologiesllp.com), Bengaluru, India.",
         ],
       ]}
     />

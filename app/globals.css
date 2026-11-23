@@ -1,4 +1,4 @@
-/* Lookzon theme · rev 17b */
+/* Lookzon theme · rev 18b */
 @import "tailwindcss";
 
 /* ─────────────────────────────────────────────
@@ -918,6 +918,17 @@ h1 em, h2 em, h3 em {
 /* footer Play button uses the app icon */
 .fc-play-icon { width: 34px; height: 34px; border-radius: 9px; overflow: hidden; background: none; box-shadow: 0 4px 12px -4px rgba(29, 107, 255, 0.6); }
 .fc-play-icon img { display: block; width: 100%; height: 100%; }
+
+
+/* parent company link */
+.fc-name { display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s; }
+.fc-name:hover { color: var(--mint); }
+.fc-name-arrow { width: 13px; height: 13px; color: var(--muted); transition: transform 0.25s var(--ease), color 0.2s; }
+.fc-name:hover .fc-name-arrow { color: var(--mint); transform: translate(2px, -2px); }
+.fc-tagline { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); }
+.fb-company { color: #a9b5c0; border-bottom: 1px solid var(--line-strong); transition: color 0.2s, border-color 0.2s; }
+.fb-company:hover { color: var(--mint); border-color: #5eead466; }
+@media (max-width: 1080px) { .fc-tagline { grid-column: 1; } }
 
 /* modal */
 .modal-backdrop {
